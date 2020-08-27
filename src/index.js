@@ -4,7 +4,7 @@ import listCountriesSearch from './templates/country-card.hbs';
 import debounce from 'lodash.debounce';
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
-import { error, Stack } from '@pnotify/core';
+import { error } from '@pnotify/core';
 
 
 const refs = {
@@ -12,7 +12,7 @@ const refs = {
   listOfCountry: document.querySelector('.js-country'),
 };
 
-refs.input.addEventListener(`input`, debounce(onInputSearch, 1000));
+refs.input.addEventListener(`input`, debounce(onInputSearch, 500));
 
 function onInputSearch(event) {
   event.preventDefault();

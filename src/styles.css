@@ -30,7 +30,6 @@ body {
   background-image: url(../src/photo/hands-600497_640\ \(1\).jpg);
  background-size: cover;
  background-repeat: no-repeat;
-/* background: rgb(203, 231, 238); */
 }
 .wrapper__name {
   display: block;
