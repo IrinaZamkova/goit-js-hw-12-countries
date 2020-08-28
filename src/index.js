@@ -6,13 +6,12 @@ import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
 import { error } from '@pnotify/core';
 
-
 const refs = {
   input: document.querySelector('.searchCountry'),
   listOfCountry: document.querySelector('.js-country'),
 };
 
-refs.input.addEventListener(`input`, debounce(onInputSearch, 500));
+refs.input.addEventListener(`input`, debounce(onInputSearch, 1000));
 
 function onInputSearch(event) {
   event.preventDefault();
