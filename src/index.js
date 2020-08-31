@@ -30,15 +30,18 @@ function onInputSearch(event) {
           delay: 2000,
           width: '460px',
         });
+        return myError
       }
       if (data.length > 1 && data.length <= 10) {
         const markUp = listCountriesSearch(data);
         refs.listOfCountry.insertAdjacentHTML('beforeend', markUp);
+        return markUp
       }
 
       if (data.length === 1) {
         const markUp = countryCard(data);
         refs.listOfCountry.insertAdjacentHTML('beforeend', markUp);
+        return markUp
       }
       if (data.length === undefined) {
         const myError = error({
@@ -46,6 +49,7 @@ function onInputSearch(event) {
           delay: 2000,
           width: '460px',
         });
+        return myError
       }
     })
     .catch(err => {
